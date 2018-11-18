@@ -11,8 +11,8 @@
 int main()
 {
 	int serial_port;
-	int xcoord;
-	int ycoord;
+	unsigned int xcoord;
+	unsigned int ycoord;
 	char payload;
 
 	if((serial_port = serialOpen("/dev/ttyAMA0", 115200)) < 0)
@@ -30,8 +30,8 @@ int main()
 	while(1){
 			printf("Sending Coordinate...\n");
 
-			xcoord = 250;
-			ycoord = 0;
+			xcoord = 63000;
+			ycoord = 62000;
 
 			serialPutchar(serial_port, 'm');
 
