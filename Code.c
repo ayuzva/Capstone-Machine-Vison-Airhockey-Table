@@ -15,7 +15,7 @@ int main()
 	unsigned int ycoord;
 	char payload;
 
-	if((serial_port = serialOpen("/dev/ttyAMA0", 115200)) < 0)
+	if((serial_port = serialOpen("/dev/ttyAMA0", 1000000)) < 0)
 	{
 		fprintf(stderr, "Unable to open serial device: %s\n", strerror(errno));
 		return 1;
