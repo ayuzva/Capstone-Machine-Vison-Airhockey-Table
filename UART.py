@@ -1,5 +1,4 @@
 import serial
-
 ser = serial.Serial ("/dev/ttyS0", 1000000)    #Open port with baud rate
 while True:
 	ser.write("m")
