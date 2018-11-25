@@ -10,11 +10,12 @@ void packetRead()
       ycoord+=Serial1.read() << 8;
       Buffer[1] = Serial1.read(); 
 
-      if(Buffer[0]== 'm' && Buffer[1]== 'm')
+      if(Buffer[0]== 'm' && Buffer[1]== 'n')
       {  
-        /*Serial.print(xcoord);
+        Serial.print(xcoord);
         Serial.print(",");
-        Serial.print(ycoord);*/
+        Serial.print(ycoord);
+        Serial.print("\n");
         setPosition_straight(xcoord, ycoord);
       }
     }

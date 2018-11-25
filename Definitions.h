@@ -40,10 +40,8 @@ uint16_t target_y_mm;
 int16_t user_max_speed;
 int16_t user_max_accel;
 
-
 unsigned int xcoord;
 unsigned int ycoord;
-
 
 // Some util functions...
 int freeRam () {
@@ -53,7 +51,7 @@ int freeRam () {
 }
 
 //uint8_t newPacket;
-char Buffer[1]; //= "000000";
+char Buffer[1]; //= "00";
 
 // Arduino abs function sometimes fail!
 int16_t myAbs(int16_t param)

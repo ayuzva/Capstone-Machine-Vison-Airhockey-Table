@@ -30,7 +30,7 @@ void setup()
   //Init console output
   Serial.begin(9600);
   //Serial.println("Hello, Starting Init V0.1");
-  delay(2000);
+  delay(1000);
 
   //UART init
   Serial1.begin(1000000); //start UART @ baud, wanna go as fast as possible 1mill for stable connection
@@ -97,21 +97,17 @@ void setup()
   max_acceleration = user_max_accel;
   max_speed = user_max_speed / 2;
   
-  delay(4000);
-  //Serial.println("Init done");
-  delay(2000);
+  delay(1000);
 
   timer_old = micros();
   timer_packet_old = timer_old;
   micros_old = timer_old;
 
-  setPosition_straight(550,0);
+  //setPosition_straight(0,550);
 }
 
 void loop() 
 {  
-
-  //packetRead();
   
   timer_value = micros();
   
@@ -119,7 +115,8 @@ void loop()
   {
     timer_old = timer_value;
     loop_counter++;
-        
+    packetRead();
+    
     if ((loop_counter % 10) == 0)
     updatePosition_straight();
     
