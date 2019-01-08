@@ -47,7 +47,7 @@ int main()
 			payload = (ycoord >> (8*1)) & 0xff;
 			serialPutchar(serial_port, payload);
 
-			serialPutchar(serial_port, 'm');
+			serialPutchar(serial_port, 'n');
 
 			exit(0);
 }
